@@ -13,6 +13,7 @@ body {
 }
 
 .container {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,4 +61,56 @@ input {
     font-size: 1.2rem;
     margin-right: 1rem;
     padding: 5px;
+}
+
+
+
+/* responsive */
+
+@media screen and (max-width:430px) {
+    body {
+        padding: 1rem;
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .container {
+        margin: 1rem;
+    }
+
+    .searchContainer {
+        display: flex;
+    }
+
+    input {
+        border: none;
+        border-radius: 5px;
+        font-size: 0.6rem;
+        margin-right: 0.5rem;
+        padding: 5px;
+    }
+
+    .btn {
+
+        padding: 8px;
+        border: none;
+        font-size: 10px;
+    }
+
+    .picture {
+        height: 250px;
+        width: 175px;
+    }
+
+    .picture img {
+        height: 250px;
+        width: 175px;
+    }
+
+    .stats {
+        font-size: 15px;
+    }
 }
