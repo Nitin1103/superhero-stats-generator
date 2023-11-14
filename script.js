@@ -26,12 +26,26 @@ const randBtn = document.getElementById('random');
 
 let initialId = 1;
 
+// search functionality
+
+const searchBtn = document.querySelector('#search-btn');
+const textInput = document.querySelector('#search-input');
+
+searchBtn.addEventListener('click', searchHero = () => {
+    const query = textInput.value;
+    document.getElementById('heroId').innerHTML = 'Hero ID: ';
+    document.getElementById('heroName').innerHTML = 'Name: ';
+    document.getElementById('heroGender').innerHTML = 'Gender: ';
+    document.getElementById('heroHeight').innerHTML = 'Height: ';
+    document.getElementById('heroWeight').innerHTML = 'Weight: ';
+    initialId = query;
+    getSuperHeroImg(query);
+});
 
 // next button
 nextBtn.addEventListener('click', function () {
     initialId++;
-    document.querySelector('.picture').innerHTML = '';
-    document.getElementById('heroId').innerHTML = 'ID: ';
+    document.getElementById('heroId').innerHTML = 'Hero ID: ';
     document.getElementById('heroName').innerHTML = 'Name: ';
     document.getElementById('heroGender').innerHTML = 'Gender: ';
     document.getElementById('heroHeight').innerHTML = 'Height: ';
@@ -48,8 +62,7 @@ prevBtn.addEventListener('click', function () {
     if (initialId > 1) {
         initialId--;
         // console.log(initialId);
-        document.querySelector('.picture').innerHTML = '';
-        document.getElementById('heroId').innerHTML = 'ID: ';
+        document.getElementById('heroId').innerHTML = 'Hero ID: ';
         document.getElementById('heroName').innerHTML = 'Name: ';
         document.getElementById('heroGender').innerHTML = 'Gender: ';
         document.getElementById('heroHeight').innerHTML = 'Height: ';
@@ -69,8 +82,7 @@ randBtn.addEventListener('click', function () {
     const rand = Math.floor(Math.random() * 732);
     initialId = rand;
     // console.log(initialId);
-    document.querySelector('.picture').innerHTML = '';
-    document.getElementById('heroId').innerHTML = 'ID: ';
+    document.getElementById('heroId').innerHTML = 'Hero ID: ';
     document.getElementById('heroName').innerHTML = 'Name: ';
     document.getElementById('heroGender').innerHTML = 'Gender: ';
     document.getElementById('heroHeight').innerHTML = 'Height: ';
